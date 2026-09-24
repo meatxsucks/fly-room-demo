@@ -49,10 +49,17 @@ Con una GPU NVIDIA hay que instalar torch desde el índice de CUDA correspondien
 
 ```bash
 .venv/bin/python run_room_demo.py --duration 30          # video, CSV y métricas en outputs/
+.venv/bin/python run_room_demo.py --duration 10 --seed 1 # otra semilla, otra corrida
 .venv/bin/python scripts/control_sin_vision.py           # control: GF sin entrada visual
 ```
 
+La entrada Poisson del cerebro es aleatoria; `--seed` (0 por defecto) fija la semilla de torch y con la
+misma semilla dos corridas producen el mismo CSV. Cada segundo simulado tarda unos 20 s en CPU.
+
 ## Resultados de la corrida de 30 s (`docs/room_demo_metrics.json`)
+
+Esta corrida se hizo antes de agregar `--seed`, así que no se reproduce exacta: con otras semillas el
+escape aparece antes o después (en una corrida de 10 s llegó en t = 8,1 s en vez de 6,7 s).
 
 | Métrica | Valor |
 |---|---|

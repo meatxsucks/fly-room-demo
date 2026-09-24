@@ -79,7 +79,9 @@ def main():
     ap.add_argument("--fps", type=int, default=30, help="fps del video")
     ap.add_argument("--stimulus", default="p9", help="estímulo tónico de fly-brain (p9 = caminar)")
     ap.add_argument("--out", default="outputs")
+    ap.add_argument("--seed", type=int, default=0, help="semilla de torch para la entrada Poisson del cerebro")
     args = ap.parse_args()
+    torch.manual_seed(args.seed)
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -218,6 +220,7 @@ def main():
         "tiempo_por_componente_s": {k: round(v, 1) for k, v in timers.items()},
         "ram_pico_mb": round(peak_rss_mb(), 0),
         "gpu": gpu_report(),
+        "seed": args.seed,
         "torch": torch.__version__,
         "threads_torch": torch.get_num_threads(),
         "objetivo_alcanzado_en_s": goal_reached_at,
