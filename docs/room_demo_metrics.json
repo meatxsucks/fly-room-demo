@@ -1,0 +1,39 @@
+{
+  "segundos_simulados": 30.0,
+  "pasos_fisica": 300000,
+  "pasos_cerebro": 3000,
+  "frames_video": 901,
+  "setup_s": 2.6,
+  "loop_s": 590.2,
+  "pasos_fisica_por_s": 508.3,
+  "factor_tiempo_real": 0.0508,
+  "frames_video_por_s_pared": 1.53,
+  "tiempo_por_componente_s": {
+    "cerebro": 151.8,
+    "fisica": 387.1,
+    "vision": 23.1,
+    "video": 26.0
+  },
+  "ram_pico_mb": 1994.0,
+  "gpu": {
+    "device": null,
+    "nota": "sin CUDA; BrainEngine solo usa cuda o cpu, así que el cerebro corre en CPU",
+    "mps_disponible": true
+  },
+  "torch": "2.14.0",
+  "threads_torch": 4,
+  "objetivo_alcanzado_en_s": null,
+  "distancia_minima_al_objetivo_mm": 16.42,
+  "posicion_final_mm": [
+    11.77,
+    -16.4,
+    0.02
+  ],
+  "tiempo_fisico_mujoco_s": 29.932,
+  "recuperaciones_fisica_t_s": [
+    11.5474,
+    23.0199
+  ],
+  "reinicios_silenciosos_t_s": [],
+  "error_fisica": null
+}

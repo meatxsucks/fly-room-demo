@@ -1,0 +1,12 @@
+flygym==1.2.1
+mujoco==3.2.7
+dm_control==1.0.27
+torch==2.14.0
+numpy==2.0.2
+pandas==2.3.3
+pyarrow
+scipy
+imageio==2.37.4
+imageio-ffmpeg==0.6.0
+pillow
+pymavlink==2.4.49
